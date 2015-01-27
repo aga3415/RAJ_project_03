@@ -28,6 +28,9 @@
         <module name="Pharmacy" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Medicines" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 
