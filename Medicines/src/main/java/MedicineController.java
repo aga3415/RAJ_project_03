@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import javax.servlet.annotation.WebServlet;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,10 +27,8 @@ public class MedicineController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public void putBook(@RequestBody Medicine medicine){
-        ObjectMapper mapper = new ObjectMapper();
-        Medicine med = mapper.readV
-        boolean successful = repo.addMedicine(medicine);
+    public void putBook(@RequestBody Medicine med){
+        boolean successful = repo.addMedicine(med);
     }
 
 

@@ -10,7 +10,7 @@ import javax.persistence.*;
  * Created by Dominik on 2015-01-27.
  */
 
-public class Medicine implements Serializable{
+public class Medicine{
 
     private String name;
     private List<Discount> discounts;
@@ -24,6 +24,24 @@ public class Medicine implements Serializable{
     public void addDiscount(Discount discount){
         discounts.add(discount);
     }
+
+    public List<Discount> getDiscounts(){
+        return discounts;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setDiscounts(List<Discount> discounts){
+        this.discounts = discounts;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+
 
     @Override
     public boolean equals(Object obj) {

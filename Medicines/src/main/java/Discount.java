@@ -3,7 +3,7 @@ import java.io.Serializable;
 /**
  * Created by Dominik on 2015-01-27.
  */
-public class Discount implements Serializable{
+public class Discount{
     private float value;
     private String describe;
 
