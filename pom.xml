@@ -5,7 +5,13 @@
   <groupId>raj</groupId>
   <artifactId>project-03</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+    <modules>
+        <module>Medicines</module>
+        <module>Pharmacy</module>
+        <module>Clinic</module>
+        <module>NFZ</module>
+    </modules>
+    <packaging>pom</packaging>
 
   <name>project-03</name>
   <url>http://maven.apache.org</url>
