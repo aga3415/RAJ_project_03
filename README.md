@@ -13,6 +13,7 @@
 - mo¿liwoœæ usuniêcia leku
 - mo¿liwoœæ pobrania zni¿ek dla danego leku oraz listy wszystkich leków wraz ze zni¿kami
 - wszêdzie format json, opcjonalnie xml (ale niekoniecznie)
+
 2. NFZ
 - komunikuje siê z web servicem za poœrednictwem zapytañ
 - na pocz¹tku wyœwietla listê wszystkich leków, które s¹ w web servisie + zni¿ki
