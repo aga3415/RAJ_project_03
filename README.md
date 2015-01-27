@@ -1,6 +1,6 @@
 # RAJ_project_03 (Rest and JMS)
 
--4 aplikacje:
+### 4 (5) aplikacje: ###
 
 1. Web service z list¹ leków i zni¿ek
 	- kilka leków
