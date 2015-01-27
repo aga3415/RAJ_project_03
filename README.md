@@ -1,17 +1,17 @@
 # RAJ_project_03 (Rest and JMS)
 
-4 aplikacje:
+-4 aplikacje:
 
-1) Web service z list¹ leków i zni¿ek \n
-a) kilka leków
-b) jeden lek mo¿e mieæ kilka zni¿ek
-c) ka¿da zni¿ka zawiera komentarz (komu nale¿y siê taka zni¿ka)
-d) mo¿liwoœæ dodania nowego leku wraz ze zni¿kami
-e) lek mo¿e nie mieæ ¿adnej zni¿ki (wtedy jest na 100%)
-f) mo¿liwoœæ zmiany listy zni¿ek dla danego leku
-g) mo¿liwoœæ usuniêcia leku
-h) mo¿liwoœæ pobrania zni¿ek dla danego leku oraz listy wszystkich leków wraz ze zni¿kami
-i) wszêdzie format json, opcjonalnie xml (ale niekoniecznie)
+-1) Web service z list¹ leków i zni¿ek \n
+-a) kilka leków
+-b) jeden lek mo¿e mieæ kilka zni¿ek
+-c) ka¿da zni¿ka zawiera komentarz (komu nale¿y siê taka zni¿ka)
+-d) mo¿liwoœæ dodania nowego leku wraz ze zni¿kami
+-e) lek mo¿e nie mieæ ¿adnej zni¿ki (wtedy jest na 100%)
+-f) mo¿liwoœæ zmiany listy zni¿ek dla danego leku
+-g) mo¿liwoœæ usuniêcia leku
+-h) mo¿liwoœæ pobrania zni¿ek dla danego leku oraz listy wszystkich leków wraz ze zni¿kami
+-i) wszêdzie format json, opcjonalnie xml (ale niekoniecznie)
 
 2) NFZ
 a) komunikuje siê z web servicem za poœrednictwem zapytañ
