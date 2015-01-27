@@ -3,16 +3,15 @@
 -4 aplikacje:
 
 1. Web service z list¹ leków i zni¿ek
-
-- kilka leków
-- jeden lek mo¿e mieæ kilka zni¿ek
-- ka¿da zni¿ka zawiera komentarz (komu nale¿y siê taka zni¿ka)
-- mo¿liwoœæ dodania nowego leku wraz ze zni¿kami
-- lek mo¿e nie mieæ ¿adnej zni¿ki (wtedy jest na 100%)
-- mo¿liwoœæ zmiany listy zni¿ek dla danego leku
-- mo¿liwoœæ usuniêcia leku
-- mo¿liwoœæ pobrania zni¿ek dla danego leku oraz listy wszystkich leków wraz ze zni¿kami
-- wszêdzie format json, opcjonalnie xml (ale niekoniecznie)
+	- kilka leków
+	- jeden lek mo¿e mieæ kilka zni¿ek
+	- ka¿da zni¿ka zawiera komentarz (komu nale¿y siê taka zni¿ka)
+	- mo¿liwoœæ dodania nowego leku wraz ze zni¿kami
+	- lek mo¿e nie mieæ ¿adnej zni¿ki (wtedy jest na 100%)
+	- mo¿liwoœæ zmiany listy zni¿ek dla danego leku
+	- mo¿liwoœæ usuniêcia leku
+	- mo¿liwoœæ pobrania zni¿ek dla danego leku oraz listy wszystkich leków wraz ze zni¿kami
+	- wszêdzie format json, opcjonalnie xml (ale niekoniecznie)
 
 2. NFZ
 - komunikuje siê z web servicem za poœrednictwem zapytañ
