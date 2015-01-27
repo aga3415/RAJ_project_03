@@ -2,7 +2,7 @@
 
 4 aplikacje:
 
-1) Web service z list¹ leków i zni¿ek
+1) Web service z list¹ leków i zni¿ek \n
 a) kilka leków
 b) jeden lek mo¿e mieæ kilka zni¿ek
 c) ka¿da zni¿ka zawiera komentarz (komu nale¿y siê taka zni¿ka)
