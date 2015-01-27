@@ -2,11 +2,10 @@
 
 -4 aplikacje:
 
--1) Web service z list¹ leków i zni¿ek
+1. Web service z list¹ leków i zni¿ek
 
--a) kilka leków
-
--b) jeden lek mo¿e mieæ kilka zni¿ek
+a) kilka leków
+b. jeden lek mo¿e mieæ kilka zni¿ek
 -c) ka¿da zni¿ka zawiera komentarz (komu nale¿y siê taka zni¿ka)
 -d) mo¿liwoœæ dodania nowego leku wraz ze zni¿kami
 -e) lek mo¿e nie mieæ ¿adnej zni¿ki (wtedy jest na 100%)
