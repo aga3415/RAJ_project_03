@@ -1,10 +1,7 @@
 import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 import javax.servlet.annotation.WebServlet;
@@ -27,11 +24,19 @@ public class MedicineController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public void putBook(@RequestBody Medicine med){
+    public void putMedicine(@RequestBody Medicine med){
         boolean successful = repo.addMedicine(med);
     }
 
+    @RequestMapping(value="/{name}", method = RequestMethod.DELETE)
+    public void removeMedicine(@PathVariable String name){
+        repo.removeMedicine(name);
+    }
 
+    @RequestMapping(value = "/{name}", method = RequestMethod.GET)
+    public Medicine getMedicine(@PathVariable String name){
+        return getMedicine(name);       //dodać obsługę błędu braku leku, sprawdzić, bo coś nie działa ;p
+    }
 
 
 }

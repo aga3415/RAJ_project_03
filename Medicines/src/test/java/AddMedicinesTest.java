@@ -38,16 +38,10 @@ public class AddMedicinesTest {
         public void setUp(){
             med1 = new Medicine("gripex");
             med2 = new Medicine("kaszelix");
-            ObjectMapper mapper = new ObjectMapper();
-            try {
-                med1S = mapper.writeValueAsString(med1);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            restTemplate.getMessageConverters().add(new Jaxb2CollectionHttpMessageConverter<Collection>());
+           // restTemplate.getMessageConverters().add(new Jaxb2CollectionHttpMessageConverter<Collection>());
         }
 
-        @Test
+        //@Test
         public void postMedicines() {
                try {
                    restTemplate.postForObject("http://localhost:8080/medicines", med1, Object.class);
@@ -56,7 +50,22 @@ public class AddMedicinesTest {
             catch(HttpClientErrorException errorException){
                 Assertions.assertThat(errorException.getStatusCode()).isEqualTo(HttpStatus.OK);
             }
-
         }
+
+        //@Test
+        public void removeMed1(){
+            try{
+                restTemplate.delete("http://localhost:8080/medicines/" + med1.getName(), med1);
+            }
+            catch(HttpClientErrorException errorException){
+                Assertions.assertThat(errorException.getStatusCode()).isEqualTo(HttpStatus.OK);
+            }
+        }
+
+    @Test
+    public void test(){
+        postMedicines();
+        removeMed1();
+    }
     }
 

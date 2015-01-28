@@ -12,7 +12,6 @@ public class MedicinesRepository {
 
     private MedicinesRepository(){
         medicines = new ArrayList<Medicine>();
-        medicines.add(new Medicine("ggg"));
     }
 
     public static MedicinesRepository getMedicinesRepository(){
@@ -52,6 +51,30 @@ public class MedicinesRepository {
 
     public List<Medicine> getAllMedicines(){
         return medicines;
+    }
 
+    /**
+     * Remove a medicine with given name.
+     * @param name name of medicine to remove
+     * @return true if medicine has been removed, otherwise false (there is no medicine with this name)
+     */
+    public boolean removeMedicine(String name){
+        Medicine tmp = new Medicine(name);
+        int i = medicines.indexOf(tmp); //if there is no medicine with this name, returns -1
+        if(i != -1){
+            return medicines.remove(medicines.get(i));
+        }
+        else return false;
+    }
+//test:
+    public static void main(String[] args){
+        Medicine med1 = new Medicine("a");
+        Medicine med2 = new Medicine("a");
+        med2.addDiscount(new Discount());
+        System.out.println(med1.equals(med2));
+        MedicinesRepository repo = MedicinesRepository.getMedicinesRepository();
+        repo.addMedicine(med1);
+        System.out.println(repo.addMedicine(med2));
+        System.out.println(repo.getMedicine(new Medicine("a").getName()));
     }
 }
