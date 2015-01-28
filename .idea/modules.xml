@@ -3,9 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Clinic/Clinic.iml" filepath="$PROJECT_DIR$/Clinic/Clinic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Jms-server/Jms-server.iml" filepath="$PROJECT_DIR$/Jms-server/Jms-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/Medicines/Medicines.iml" filepath="$PROJECT_DIR$/Medicines/Medicines.iml" />
       <module fileurl="file://$PROJECT_DIR$/NFZ/NFZ.iml" filepath="$PROJECT_DIR$/NFZ/NFZ.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pharmacy/Pharmacy.iml" filepath="$PROJECT_DIR$/Pharmacy/Pharmacy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../distributed-java-intro/7-JMS-summary-and-project-kickoff/students/supermarket/jms-server/jms-server.iml" filepath="$PROJECT_DIR$/../../distributed-java-intro/7-JMS-summary-and-project-kickoff/students/supermarket/jms-server/jms-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/project-03.iml" filepath="$PROJECT_DIR$/project-03.iml" />
     </modules>
   </component>

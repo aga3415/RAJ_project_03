@@ -7,6 +7,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../../distributed-java-intro/7-JMS-summary-and-project-kickoff/students/supermarket/jms-server/pom.xml" />
       </list>
     </option>
   </component>

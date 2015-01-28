@@ -23,6 +23,8 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="Clinic" />
+        <module name="jms-server" />
+        <module name="Jms-server" />
         <module name="Medicines" />
         <module name="NFZ" />
         <module name="Pharmacy" />

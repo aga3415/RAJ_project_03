@@ -1,14 +1,6 @@
 import exception.MedicineAlreadyExistsException;
 import exception.MedicineNotFoundException;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.springframework.boot.context.embedded.ServletRegistrationBean;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
-
-
-import javax.servlet.annotation.WebServlet;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**

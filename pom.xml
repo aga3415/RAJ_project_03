@@ -10,6 +10,7 @@
         <module>Pharmacy</module>
         <module>Clinic</module>
         <module>NFZ</module>
+        <module>jms-server</module>
     </modules>
     <packaging>pom</packaging>
 
