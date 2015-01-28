@@ -35,8 +35,6 @@ public class MedicineController {
 
     @RequestMapping(value = "/{name}", method = RequestMethod.GET)
     public Medicine getMedicine(@PathVariable String name){
-        return getMedicine(name);       //dodać obsługę błędu braku leku, sprawdzić, bo coś nie działa ;p
+        return repo.getMedicine(name);       //dodać obsługę błędu braku leku
     }
-
-
 }

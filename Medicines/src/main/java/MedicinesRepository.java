@@ -66,15 +66,4 @@ public class MedicinesRepository {
         }
         else return false;
     }
-//test:
-    public static void main(String[] args){
-        Medicine med1 = new Medicine("a");
-        Medicine med2 = new Medicine("a");
-        med2.addDiscount(new Discount());
-        System.out.println(med1.equals(med2));
-        MedicinesRepository repo = MedicinesRepository.getMedicinesRepository();
-        repo.addMedicine(med1);
-        System.out.println(repo.addMedicine(med2));
-        System.out.println(repo.getMedicine(new Medicine("a").getName()));
-    }
 }
