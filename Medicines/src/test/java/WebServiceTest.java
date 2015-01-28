@@ -24,6 +24,7 @@ public class WebServiceTest {
     @Before
     public void setUp(){
         med1 = new Medicine("gripex");
+        med1.addDiscount(new Discount());
         med2 = new Medicine("kaszelix");
         medGet = new Medicine("coś");
         restTemplate.postForObject("http://localhost:8080/medicines", medGet, Object.class);

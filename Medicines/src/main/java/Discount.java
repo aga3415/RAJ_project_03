@@ -16,4 +16,17 @@ public class Discount{
         this.value = value;
         this.describe = describe;
     }
+
+    public float getValue(){
+        return value;
+    }
+    public String getDescribe(){
+        return describe;
+    }
+    public void setValue(float value){
+        this.value = value;
+    }
+    public void setDescribe(String describe){
+        this.describe = describe;
+    }
 }

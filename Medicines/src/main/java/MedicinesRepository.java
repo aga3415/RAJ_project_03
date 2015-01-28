@@ -12,6 +12,29 @@ public class MedicinesRepository {
 
     private MedicinesRepository(){
         medicines = new ArrayList<Medicine>();
+
+        Medicine painKiller = new Medicine("Już nie boli");
+        Medicine bloodPressure = new Medicine("Ciśnieniomix");
+        Medicine mental = new Medicine("Ciii");
+        Medicine sugar = new Medicine("Glukoz");
+        Medicine temperature = new Medicine("Gorączka stop");
+
+        painKiller.addDiscount(new Discount(20, "Osoby chore na nowotwory złośliwe."));
+        painKiller.addDiscount(new Discount(10, "Osoby ze zdiagnozowaną migreną."));
+
+        bloodPressure.addDiscount(new Discount(3.5f, "Osoby z nadciśnieniem."));
+
+        mental.addDiscount(new Discount(83, "Osoby ze schizofrenią."));
+
+        sugar.addDiscount(new Discount());
+
+        temperature.addDiscount((new Discount()));
+
+        medicines.add(painKiller);
+        medicines.add(bloodPressure);
+        medicines.add(mental);
+        medicines.add(sugar);
+        medicines.add(temperature);
     }
 
     public static MedicinesRepository getMedicinesRepository(){
