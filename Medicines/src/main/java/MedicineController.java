@@ -37,4 +37,15 @@ public class MedicineController {
     public Medicine getMedicine(@PathVariable String name){
         return repo.getMedicine(name);       //dodać obsługę błędu braku leku
     }
+
+    @RequestMapping(value = "/{name}", method = RequestMethod.PUT)
+    public void replaceDiscountsList(@PathVariable String name, @RequestBody List<Discount> discounts){
+        Medicine med = repo.getMedicine(name);
+        if(med != null){
+            med.setDiscounts(discounts);
+        }
+        else{
+            //obsługa błędu
+        }
+    }
 }

@@ -8,6 +8,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * Created by Dominik on 2015-01-28.
@@ -55,6 +58,20 @@ public class WebServiceTest {
         Medicine taken = restTemplate.getForObject("http://localhost:8080/medicines/" + medGet.getName(), Medicine.class);
         Assertions.assertThat(taken.equals(medGet));
     }
+
+    @Test
+    public void replaceDiscountsList(){
+        Medicine m = new Medicine("Ejjj");
+        m.addDiscount(new Discount());
+        restTemplate.postForObject("http://localhost:8080/medicines", m, Object.class);
+        List<Discount> discounts = new ArrayList<Discount>();
+        discounts.add(new Discount(87, "Dla Ali"));
+        discounts.add(new Discount());
+        restTemplate.put("http://localhost:8080/medicines/" + m.getName(), discounts);
+        Medicine taken = restTemplate.getForObject("http://localhost:8080/medicines/" + m.getName(), Medicine.class);
+        Assertions.assertThat(taken.getDiscounts().size() == discounts.size());
+    }
+
 
 }
 
