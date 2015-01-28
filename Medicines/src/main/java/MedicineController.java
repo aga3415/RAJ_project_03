@@ -1,3 +1,5 @@
+import exception.MedicineAlreadyExistsException;
+import exception.MedicineNotFoundException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -26,16 +28,22 @@ public class MedicineController {
     @RequestMapping(method = RequestMethod.POST)
     public void putMedicine(@RequestBody Medicine med){
         boolean successful = repo.addMedicine(med);
+        if(!successful) throw new MedicineAlreadyExistsException();
     }
 
     @RequestMapping(value="/{name}", method = RequestMethod.DELETE)
     public void removeMedicine(@PathVariable String name){
-        repo.removeMedicine(name);
+        boolean successful = repo.removeMedicine(name);
+        if(!successful) throw new MedicineNotFoundException();
     }
 
     @RequestMapping(value = "/{name}", method = RequestMethod.GET)
     public Medicine getMedicine(@PathVariable String name){
-        return repo.getMedicine(name);       //dodać obsługę błędu braku leku
+        Medicine med = repo.getMedicine(name);
+        if(med == null){
+            throw new MedicineNotFoundException();
+        }
+        else  return med;
     }
 
     @RequestMapping(value = "/{name}", method = RequestMethod.PUT)
@@ -45,7 +53,7 @@ public class MedicineController {
             med.setDiscounts(discounts);
         }
         else{
-            //obsługa błędu
+            throw new MedicineNotFoundException();
         }
     }
 }
